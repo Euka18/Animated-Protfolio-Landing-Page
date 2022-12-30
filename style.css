@@ -1,0 +1,258 @@
+:root
+{
+    --background_DarkBlack: #000000;
+    --background_DarkPurple: #01000fad;
+    --background_DarkViolet: #270111;
+    
+    --Anton: 'Anton', sans-serif;
+    --Oswald: 'Oswald', sans-serif;
+
+    --textFont-Size: 1.3rem;
+    --navigationFont-Size: 3rem;
+    --TitleFont-Size: 6rem;
+}
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body 
+{
+    font-family: var(--Anton);
+    background-color: var(--background_DarkBlack);
+    overflow-x: hidden;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigationToggle
+{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 100px;
+    height: 60px;
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 10000;
+
+    visibility: hidden;
+}
+.navigation
+{
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #270111;
+    flex-direction: column;
+    z-index: 1000;
+    transition: all .5s ease-out;
+}
+.navigation a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: var(--navigationFont-Size);
+    text-transform: uppercase;
+    transition: all .3s;
+    margin: 20px;
+}
+.navigation a:hover
+{
+    transform: scale(1.2);
+}
+.navigation.active
+{
+    right: 0;
+}
+.loading_wrapper
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+.loading_wrapper .title
+{
+    color: #fff;
+    font-size: var(--TitleFont-Size);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    pointer-events: none;
+}
+.loading_wrapper .title_1,
+.loading_wrapper .title_2
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    visibility: hidden;
+}
+.loading_wrapper .title_3
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    visibility: hidden;
+}
+.landing
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.landing .backgroundElement_Big
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--background_DarkViolet);
+    z-index: -2;
+
+    visibility: hidden;
+}
+.landing .backgroundElement_Small
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42vw;
+    height: 100vh;
+    background-color: var(--background_DarkPurple);
+    z-index: -1;
+
+    visibility: hidden;
+}
+.landing .imgProfil_Container
+{
+    width: 400px;
+    height: 600px;
+    background-image: url('ProfilImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    visibility: hidden;
+}
+.side-text
+{
+    font-size: var(--textFont-Size);
+    color: #fff;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 3.2;
+
+    visibility: hidden;
+}
+.text-left
+{
+    position: absolute;
+    left: 10rem;
+}
+.text-right
+{
+    position: absolute;
+    right: 10rem;
+}
+
+/* @media (max-width: 576px) 
+{
+    .navigationToggle
+    {
+        top: 20px;
+        right: 20px;
+    }
+    .navigation
+    {
+        right: -100vw;
+        width: 100vw;
+    }
+    .navigation a
+    {
+        font-size: calc(.8 * var(--navigationFont-Size));
+    }
+    .side-text
+    {
+        font-size: calc(.8 * var(--textFont-Size));
+        line-height: 2.2;
+    }
+    .text-left
+    {
+        left: 2rem;
+    }
+    .text-right
+    {
+        right: 2rem;
+    }
+    .landing .imgProfil_Container
+    {
+        width: 200px;
+        height: 300px;
+    }
+    .landing .title
+    {
+        font-size: calc(.6 * var(--TitleFont-Size));
+    }
+}
+
+@media (min-width: 480px) and (max-width: 992px) 
+{
+    .navigation
+    {
+        right: -100vw;
+        width: 100vw;
+    }
+    .text-left
+    {
+        left: 5rem;
+    }
+    .text-right
+    {
+        right: 5rem;
+    }
+    .landing .imgProfil_Container
+    {
+        width: 400px;
+        height: 600px;
+    }
+} 
+
+@media (orientation: landscape) and (max-width: 1200px)
+{
+    .navigation
+    {
+        right: -100vw;
+        width: 100vw;
+    }
+    .text-left
+    {
+        left: 5rem;
+    }
+    .text-right
+    {
+        right: 5rem;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1440px) 
+{
+
+} */
